@@ -1,0 +1,42 @@
+{
+  "name": "main",
+  "version": "0.1.0",
+  "description": "main",
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc",
+    "test": "npm run test:unit",
+    "test:unit": "jest --passWithNoTests --verbose",
+    "test:unit:watch": "npm run test:unit -- --watch --notify",
+    "test:coverage": "npm run test:unit -- --coverage",
+    "lint": "eslint --ext=.js,.mjs,.ts --max-warnings=0 src/",
+    "lint:fix": "npm run lint -- --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thuannhit/af-one.git"
+  },
+  "author": {
+    "name": "Thuan Nguyen",
+    "email": "thuannh0206@gmail.com"
+  },
+  "contributors": [
+    {
+      "name": "Thuan Nguyen",
+      "email": "thuannh0206@gmail.com"
+    }
+  ],
+  "license": "UNLICENSED",
+  "private": true,
+  "engines": {
+    "node": ">=14",
+    "npm": ">=8"
+  },
+  "dependencies": {
+    "@nestjs/apollo": "^10.1.0",
+    "@nestjs/config": "^2.2.0",
+    "@nestjs/graphql": "^10.1.0",
+    "apollo-server-express": "^3.10.2",
+    "graphql": "^16.6.0"
+  }
+}

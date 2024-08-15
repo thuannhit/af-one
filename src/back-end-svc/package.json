@@ -1,0 +1,78 @@
+{
+  "name": "back-end-svc",
+  "version": "0.1.0",
+  "description": "back-end",
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc",
+    "test": "npm run test:unit",
+    "test:unit": "jest --passWithNoTests --verbose",
+    "test:unit:watch": "npm run test:unit -- --watch --notify",
+    "test:coverage": "npm run test:unit -- --coverage",
+    "lint": "eslint --ext=.js,.mjs,.ts --max-warnings=0 src/",
+    "lint:fix": "npm run lint -- --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thuannhit/af-one.git"
+  },
+  "author": {
+    "name": "Thuan Nguyen",
+    "email": "thuannh0206@gmail.com"
+  },
+  "contributors": [
+    {
+      "name": "Thuan Nguyen",
+      "email": "thuannh0206@gmail.com"
+    }
+  ],
+  "license": "UNLICENSED",
+  "private": true,
+  "engines": {
+    "node": ">=14",
+    "npm": ">=8"
+  },
+  "dependencies": {
+    "zod": "3.14.4"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "7.16.4",
+    "@tsconfig/node14": "1.0.1",
+    "@types/jest": "27.0.2",
+    "@types/node": "16.11.1",
+    "@typescript-eslint/eslint-plugin": "5.6.0",
+    "@typescript-eslint/parser": "5.6.0",
+    "babel-jest": "27.4.2",
+    "copy-webpack-plugin": "10.2.4",
+    "dotenv": "16.0.0",
+    "eslint": "8.0.1",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-plugin-jest": "25.3.0",
+    "fast-glob": "3.2.5",
+    "git-repo-info": "2.1.1",
+    "glob": "7.1.7",
+    "husky": "6.0.0",
+    "jest": "27.0.4",
+    "jest-junit": "12.2.0",
+    "lint-staged": "11.0.0",
+    "prettier": "2.3.1",
+    "source-map-loader": "3.0.1",
+    "terser-webpack-plugin": "5.3.1",
+    "ts-jest": "27.0.3",
+    "ts-loader": "9.2.6",
+    "typescript": "4.3.2",
+    "webpack-cli": "4.9.2"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "arrowParens": "avoid"
+  },
+  "lint-staged": {
+    "**/*.(js|mjs|ts)": [
+      "eslint --fix"
+    ],
+    "**/*.(js|json|mjs|md|yml|yaml|ts)": [
+      "prettier --write"
+    ]
+  }
+}

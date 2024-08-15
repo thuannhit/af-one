@@ -1,0 +1,9 @@
+coverage/
+output/
+dist/
+lib/
+node_modules/
+package-lock.json
+.serverless/
+.webpack/
+infra-deploy-tools/
